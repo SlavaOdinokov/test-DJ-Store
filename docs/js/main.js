@@ -37,8 +37,6 @@ $(document).ready(function() {
 	// Модальное окно popup-form
 	// Открыть по кнопке
     $('.js-button-form').click(function(){
-		$('header').css('filter','blur(2px)')
-		$('main').css('filter','blur(2px)')
 		$('.js-overlay-form').fadeIn()
 		// $('body').addClass('noscroll')
     })
@@ -46,8 +44,6 @@ $(document).ready(function() {
     // Закрытие окна
     $('.js-close-form').click(function(){
 		$('.js-overlay-form').fadeOut()
-		$('header').css('filter','none')
-		$('main').css('filter','none')
 		// $('body').removeClass('noscroll')
     })
 
@@ -56,12 +52,9 @@ $(document).ready(function() {
         var popup = $('.js-popup-form')
         if (e.target!=popup[0]&&popup.has(e.target).length === 0) { 
 			$('.js-overlay-form').fadeOut()
-			$('header').css('filter','none')
-			$('main').css('filter','none')
 			// $('body').removeClass('noscroll')
         }
 	})
-
 
 
 	// Отправка заявки 
@@ -80,9 +73,7 @@ $(document).ready(function() {
 	// 			dataType: 'html',
 	// 			data: $(this).serialize()
 	// 		}).done(function() {
-	// 			$('.js-overlay-send').fadeIn()
-	// 			$('header').css('filter','blur(2px)')
-	// 			$('main').css('filter','blur(2px)')
+	// 			$('.js-overlay-thank').fadeIn()
 	// 			$(this).find('input').val('')
 	// 			$('#backcall-form').trigger('reset')
 	// 		})
@@ -92,33 +83,24 @@ $(document).ready(function() {
 	// Раскомментировать!!!
 
 
-	// При нажатие 'отправить'
+	// Модальное окно thank
 	// Закомментировать код ниже если тестировать локально!!!
+	// При нажатие 'отправить'
 	$('.js-form-btn').click(function(){
-		$('header').css('filter','blur(2px)')
-		$('main').css('filter','blur(2px)')
-		$('.js-overlay-send').fadeIn()
+		$('.js-overlay-thank').fadeIn()
 	})
 	// Закомментировать!!!
 
-
-
 	// Закрытие окна "Спасибо"
-    $('.js-close-send').click(function(){
-		$('.js-overlay-send').fadeOut()
-		$('header').css('filter','none')
-		$('main').css('filter','none')
-		$("body").removeClass('noscroll')
+    $('.js-close-thank').click(function(){
+		$('.js-overlay-thank').fadeOut()
 	})
 	
 	// Закрытие "Спасибо" по клику вне окна
     $(document).mouseup(function (e) {
-        var popup = $('.js-popup-send')
+        var popup = $('.js-popup-thank')
         if (e.target!=popup[0]&&popup.has(e.target).length === 0) { 
-			$('.js-overlay-send').fadeOut()
-			$('header').css('filter','none')
-			$('main').css('filter','none')
-			$("body").removeClass('noscroll')
+			$('.js-overlay-thank').fadeOut()
         }
 	})
 
