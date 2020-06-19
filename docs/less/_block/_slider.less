@@ -1,0 +1,124 @@
+.slider {
+    max-width: 1920px;
+	margin-left: auto;
+	margin-right: auto;
+    // background-image: url(../img/slider-bg.jpg);
+    background: linear-gradient(0deg, rgba(1, 1, 1, 0.6), rgba(1, 1, 1, 0.6)), url(../img/slider-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.slider-content-wrapper {
+    padding-top: 260px;
+    padding-bottom: 170px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.slider-content {
+    margin-left: auto;
+    max-width: 620px;
+    padding-left: 30px;
+    width: 50%;
+}
+
+.slider-content__trend {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.slider-content__heading {
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 52px;
+    line-height: 63px;
+}
+
+.slider-content__text {
+    margin-bottom: 50px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 148%;
+    opacity: 0.8;
+}
+
+.slider-small-wrapper {
+    width: 50%;
+    padding-top: 130px;
+}
+
+.slider-small {
+    position: relative;
+    max-width: 525px;
+    margin-left: auto;
+    
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 185px;
+        height: 205px;
+        width: 2px;
+        background-color: rgba(255, 255, 255,0.1);
+    }
+}
+
+.slider-small__item {
+    margin-bottom: 50px;
+    padding-right: 25px;
+    max-width: 350px;
+}
+
+.slider-small__number {
+    margin-bottom: 10px;
+    color: #397DFF;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 78px;
+}
+
+.slider-small__desc {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 160%;
+    opacity: 0.7;
+}
+
+.slider-small__controls {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(186, 209, 255, 0.1);
+    transition: .3s;
+
+    img {
+        opacity: 0.2;
+    }
+
+    &:hover {
+        background: #397DFF;
+        transition: .3s;
+
+        img {
+            opacity: 1;
+        }
+    }
+}
+
+.slider-small__control-left {
+    margin-right: 40px;
+    padding: 7px 9px 6px 9px;
+}
+
+.slider-small__control-right {
+    padding: 7px 10px 7px 12px;
+}
+
+// Стиили слайдера
+.owl-stage {padding-left: 0px !important;}
+.owl-item {opacity: 0.3;}
+.owl-item.active {opacity: 1;}
