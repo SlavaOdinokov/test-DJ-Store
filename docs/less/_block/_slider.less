@@ -1,16 +1,15 @@
 .slider {
     max-width: 1920px;
 	margin-left: auto;
-	margin-right: auto;
-    // background-image: url(../img/slider-bg.jpg);
-    background: linear-gradient(0deg, rgba(1, 1, 1, 0.6), rgba(1, 1, 1, 0.6)), url(../img/slider-bg.jpg);
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-item {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-}
-
-.slider-content-wrapper {
-    // padding-top: 260px;
     padding-top: 170px;
     padding-bottom: 170px;
     display: flex;
@@ -18,11 +17,31 @@
     color: #fff;
 }
 
+.slider-item-1 {
+    background: linear-gradient(0deg, rgba(1, 1, 1, 0.6), rgba(1, 1, 1, 0.6)),url(../img/slider-bg/slider-bg-1.jpg);
+}
+
+.slider-item-2 {
+    background: linear-gradient(0deg, rgba(1, 1, 1, 0.6), rgba(1, 1, 1, 0.6)),url(../img/slider-bg/slider-bg-2.jpg);
+}
+
+.slider-item-3 {
+    background: linear-gradient(0deg, rgba(1, 1, 1, 0.6), rgba(1, 1, 1, 0.6)),url(../img/slider-bg/slider-bg-3.jpg);
+}
+
+.slider-item-4 {
+    background: linear-gradient(0deg, rgba(1, 1, 1, 0.6), rgba(1, 1, 1, 0.6)),url(../img/slider-bg/slider-bg-4.jpg);
+}
+
+.slider-content-wrapper {
+    width: 50%;
+    margin-right: auto;
+}
+
 .slider-content {
     margin-left: auto;
     max-width: 620px;
     padding-left: 30px;
-    width: 50%;
 }
 
 .slider-content__trend {
@@ -48,8 +67,14 @@
 }
 
 .slider-small-wrapper {
+    position: absolute;
+    top: 214px;
+    right: 0;
+    z-index: 10;
+
     width: 50%;
-    padding-top: 130px;
+    color: #fff;
+    // padding-top: 130px;
 }
 
 .slider-small {
@@ -93,7 +118,7 @@
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    background: rgba(186, 209, 255, 0.1);
+    background: rgba(186, 209, 255, 0.2);
     transition: .3s;
 
     img {
@@ -119,7 +144,12 @@
     padding: 7px 10px 7px 12px;
 }
 
-// Стиили слайдера
+// Стиили слайдеров
 .owl-stage {padding-left: 0px !important;}
 .owl-item {opacity: 0.3;}
 .owl-item.active {opacity: 1;}
+
+.flexslider {
+    border: none;
+    margin: 0;
+}

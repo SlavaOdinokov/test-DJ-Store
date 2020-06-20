@@ -7,26 +7,77 @@
 	<title>Document</title>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="./libs/owlcarousel2/assets/owl.carousel.min.css"/>
+	<link rel="stylesheet" href="./libs/flexslider/flexslider.css">
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 	<header>
 		<div class="container">
 			<div class="header">
-
-				<div class="header__logo">
-					<a href="index.html">
-						<img src="./img/logo.png" alt="Logo">
-					</a>
-				</div>
-
+				
 				<nav class="header-nav">
-					<a href="index.html" class="header-nav__item">Главная</a>
-					<a href="#!" class="header-nav__item">Проекты</a>
-					<a href="#!" class="header-nav__item">Услуги</a>
-					<a href="#!" class="header-nav__item">О компании</a>
-					<a href="#!" class="header-nav__item">Готовые решения</a>
-					<a href="#!" class="header-nav__item">Контакты</a>
+					<div class="header__logo">
+						<a href="index.html">
+							<img src="./img/logo.png" alt="Logo">
+						</a>
+						<div id="navToggle" class="nav-bar"><span></span></div>
+					</div>
+					
+					<!-- Выпадающее меню -->
+					<div id="navMenu">
+						<ul class="header-nav__items">
+							<li class="header-nav__item">
+								<div class="header-nav__item-icon">
+									<img src="./img/nav_icons/main.svg" alt="main">
+								</div>
+								<a href="index.html" >Главная</a>
+							</li>
+							<li class="header-nav__item">
+								<div class="header-nav__item-icon">
+									<img src="./img/nav_icons/projects.svg" alt="main">
+								</div>
+								<a href="#!">Проекты</a>
+							</li>
+							<li class="header-nav__item">
+								<div class="header-nav__item-icon">
+									<img src="./img/nav_icons/services.svg" alt="main">
+								</div>
+								<a href="#!">Услуги</a>
+							</li>
+							<li class="header-nav__item">
+								<div class="header-nav__item-icon">
+									<img src="./img/nav_icons/about_company.svg" alt="main">
+								</div>
+								<a href="#!">О компании</a>
+							</li>
+							<li class="header-nav__item">
+								<div class="header-nav__item-icon">
+									<img src="./img/nav_icons/solutions.svg" alt="main">
+								</div>
+								<a href="#!">Готовые решения</a>
+							</li>
+							<li class="header-nav__item">
+								<div class="header-nav__item-icon">
+									<img src="./img/nav_icons/contacts.svg" alt="main">
+								</div>
+								<a href="#!">Контакты</a>
+							</li>
+						</ul>
+	
+						<button class="header-nav__btn">Заполнить бриф</button>
+						
+						<p class="header-nav__text">Напишите нам</p>
+	
+						<div class="header-nav__email-wrapper">
+							<div class="header-email__icon">
+								<img src="./img/icons/mobail_mail_icon.svg" alt="email">
+							</div>
+							<a href="mailto:info@sld-store.ru?subject=Вопрос c сайта sld-store.ru" class="header-email__email">
+								info@sld-store.ru
+							</a>
+						</div>
+					</div>
+					<!-- // Выпадающее меню -->
 				</nav>
 
 				<div class="header-email-wrapper">
@@ -54,63 +105,116 @@
 
 	<main>
 		<section class="slider">
-			<div class="slider-content-wrapper">
-				<div class="slider-content">
-					<h2 class="slider-content__trend">Оснащение конференц-залов</h2>
-					<h1 class="slider-content__heading">Видео конференции</h1>
-					<p class="slider-content__text">Профессиональное оборудование для конференц-залов предназначено для проведения и организации презентаций, совещаний, бизнес-тренингов и онлайн-трансляции контента.</p>
-					<div class="button-group">
-						<button class="button btn-1 js-button-form">Обратный звонок</button>
-						<button class="button btn-2">Заполнить бриф</button>
-					</div>
-				</div>
 
-				<div class="slider-small-wrapper">
-					<div class="slider-small">
-
-						<div class="owl-carousel">
-
-							<div class="slider-small__item">
-								<div class="slider-small__number">01</div>
-								<div class="slider-small__desc">
-									<p>Простота использования оснащения позволяет решать функциональные и организационные задачи, оптимизировать работу, проводить мероприятия различного масштаба.</p>
+			<div class="flexslider">
+				<ul class="slides">
+					<li>
+						<div class="slider-item slider-item-1">
+							<div class="slider-content-wrapper">
+								<div class="slider-content">
+									<h2 class="slider-content__trend">Оснащение конференц-залов</h2>
+									<h1 class="slider-content__heading">Видео конференции</h1>
+									<p class="slider-content__text">Профессиональное оборудование для конференц-залов предназначено для проведения и организации презентаций, совещаний, бизнес-тренингов и онлайн-трансляции контента.</p>
+									<div class="button-group">
+										<button class="button btn-1 js-button-form">Обратный звонок</button>
+										<button class="button btn-2">Заполнить бриф</button>
+									</div>
 								</div>
 							</div>
-
-							<div class="slider-small__item">
-								<div class="slider-small__number">02</div>
-								<div class="slider-small__desc">
-									<p>Применение инновационных решений для демонстрации культурных и исторических реликвий – актуальная тенденция, которая успешно применяется в музеях и на площадках альтернативного искусства.</p>
+						</div>
+					</li>
+					<li>
+						<div class="slider-item slider-item-2">
+							<div class="slider-content-wrapper">
+								<div class="slider-content">
+									<h2 class="slider-content__trend">Оснащение конференц-залов</h2>
+									<h1 class="slider-content__heading">Слайд 2</h1>
+									<p class="slider-content__text">Профессиональное оборудование для конференц-залов предназначено для проведения и организации презентаций, совещаний, бизнес-тренингов и онлайн-трансляции контента.</p>
+									<div class="button-group">
+										<button class="button btn-1 js-button-form">Обратный звонок</button>
+										<button class="button btn-2">Заполнить бриф</button>
+									</div>
 								</div>
 							</div>
-
-							<div class="slider-small__item">
-								<div class="slider-small__number">03</div>
-								<div class="slider-small__desc">
-									<p>Применение инновационных решений для демонстрации культурных и исторических реликвий – актуальная тенденция, которая успешно применяется в музеях и на площадках альтернативного искусства.</p>
+						</div>
+					</li>
+					<li>
+						<div class="slider-item slider-item-3">
+							<div class="slider-content-wrapper">
+								<div class="slider-content">
+									<h2 class="slider-content__trend">Оснащение конференц-залов</h2>
+									<h1 class="slider-content__heading">Слайд 3</h1>
+									<p class="slider-content__text">Профессиональное оборудование для конференц-залов предназначено для проведения и организации презентаций, совещаний, бизнес-тренингов и онлайн-трансляции контента.</p>
+									<div class="button-group">
+										<button class="button btn-1 js-button-form">Обратный звонок</button>
+										<button class="button btn-2">Заполнить бриф</button>
+									</div>
 								</div>
 							</div>
-
-							<div class="slider-small__item">
-								<div class="slider-small__number">04</div>
-								<div class="slider-small__desc">
-									<p>Применение инновационных решений для демонстрации культурных и исторических реликвий – актуальная тенденция, которая успешно применяется в музеях и на площадках альтернативного искусства.</p>
+						</div>
+					</li>
+					<li>
+						<div class="slider-item slider-item-4">
+							<div class="slider-content-wrapper">
+								<div class="slider-content">
+									<h2 class="slider-content__trend">Оснащение конференц-залов</h2>
+									<h1 class="slider-content__heading">Слайд 4</h1>
+									<p class="slider-content__text">Профессиональное оборудование для конференц-залов предназначено для проведения и организации презентаций, совещаний, бизнес-тренингов и онлайн-трансляции контента.</p>
+									<div class="button-group">
+										<button class="button btn-1 js-button-form">Обратный звонок</button>
+										<button class="button btn-2">Заполнить бриф</button>
+									</div>
 								</div>
 							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
 
+			<div class="slider-small-wrapper">
+				<div class="slider-small">
+
+					<div class="owl-carousel">
+						<div class="slider-small__item">
+							<div class="slider-small__number">01</div>
+							<div class="slider-small__desc">
+								<p>Простота использования оснащения позволяет решать функциональные и организационные задачи, оптимизировать работу, проводить мероприятия различного масштаба.</p>
+							</div>
 						</div>
 
+						<div class="slider-small__item">
+							<div class="slider-small__number">02</div>
+							<div class="slider-small__desc">
+								<p>Применение инновационных решений для демонстрации культурных и исторических реликвий – актуальная тенденция, которая успешно применяется в музеях и на площадках альтернативного искусства.</p>
+							</div>
+						</div>
+
+						<div class="slider-small__item">
+							<div class="slider-small__number">03</div>
+							<div class="slider-small__desc">
+								<p>Применение инновационных решений для демонстрации культурных и исторических реликвий – актуальная тенденция, которая успешно применяется в музеях и на площадках альтернативного искусства.</p>
+							</div>
+						</div>
+
+						<div class="slider-small__item">
+							<div class="slider-small__number">04</div>
+							<div class="slider-small__desc">
+								<p>Применение инновационных решений для демонстрации культурных и исторических реликвий – актуальная тенденция, которая успешно применяется в музеях и на площадках альтернативного искусства.</p>
+							</div>
+						</div>
 					</div>
-					
-					<!-- <div class="slider-small__control-left">
-						<img src="./img/slide-control-left.svg" alt="left">
-					</div>
-					<div class="slider-small__control-right">
-						<img src="./img/slide-control-right.svg" alt="left">
-					</div> -->
 
 				</div>
+				
+				<!-- <div class="slider-small__control-left">
+					<img src="./img/slide-control-left.svg" alt="left">
+				</div>
+				<div class="slider-small__control-right">
+					<img src="./img/slide-control-right.svg" alt="left">
+				</div> -->
+
 			</div>
+
 		</section>
 
 		<section class="electro-voice">
@@ -204,6 +308,7 @@
 
 	<script src="./libs/jquery/jquery-3.4.1.min.js"></script>
 	<script src="./libs/owlcarousel2/owl.carousel.min.js"></script>
+	<script src="./libs/flexslider/jquery.flexslider.js"></script>
 	<script src="js/main.js"></script>
 
 </body>

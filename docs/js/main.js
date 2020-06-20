@@ -1,4 +1,57 @@
 $(document).ready(function() {
+
+	// Выпадающее меню
+    const pull = $('#navToggle')
+    const menu = $('#navMenu')
+    const navBar = $('.nav-bar')
+    
+    // Событие при нажатии на кнопку
+    $(pull).on('click', function(e){
+        // Отменяем стандартное поведение
+        e.preventDefault()
+        // Открываем, скрываем меню
+        menu.slideToggle()
+        // Добовляем класс "active"
+        $(navBar).toggleClass('active')
+    })
+    
+    // При изменении ширины окна 
+    $(window).resize(function(){
+        const w = $(window).width()
+        if(w > 640 && menu.is(':hidden')) {
+            menu.removeAttr('style')
+        }
+    })
+
+    // Сворачиваем меню при клике на ссылку
+    // const widthNav = $(window).width()
+    // if(widthNav < 1200) {
+    //     $('#navMenu').on('click', function(){
+    //         menu.slideToggle()
+    //         $(navBar).toggleClass('active')
+    //     })
+	// }
+
+
+	// Слайдер
+	$('.flexslider').flexslider({
+		animation: "fade",
+		animationSpeed: 600,
+		slideshow: false,
+		controlNav: false,
+		directionNav: false,
+
+		start: function(slider){
+			$('.owl-next').click(function(event){
+				event.preventDefault()
+				slider.flexAnimate(slider.getTarget("next"))
+			})
+			$('.owl-prev').click(function(event){
+				event.preventDefault()
+				slider.flexAnimate(slider.getTarget("prev"))
+			})
+		}
+	})
 	
 	$(".owl-carousel").owlCarousel({
 		items: 1,
@@ -27,7 +80,7 @@ $(document).ready(function() {
 
     // Закрытие по клику вне окна
     $(document).mouseup(function (e) {
-        var popup = $('.js-popup')
+        const popup = $('.js-popup')
         if (e.target!=popup[0]&&popup.has(e.target).length === 0) { 
             $('.js-overlay').fadeOut()
         }
@@ -49,7 +102,7 @@ $(document).ready(function() {
 
     // Закрытие по клику вне окна
     $(document).mouseup(function (e) {
-        var popup = $('.js-popup-form')
+        const popup = $('.js-popup-form')
         if (e.target!=popup[0]&&popup.has(e.target).length === 0) { 
 			$('.js-overlay-form').fadeOut()
 			// $('body').removeClass('noscroll')
@@ -84,7 +137,7 @@ $(document).ready(function() {
 
 
 	// Модальное окно thank
-	// Закомментировать код ниже если тестировать локально!!!
+	// Закомментировать код ниже если тестировать на сервере!!!
 	// При нажатие 'отправить'
 	$('.js-form-btn').click(function(){
 		$('.js-overlay-thank').fadeIn()
@@ -98,7 +151,7 @@ $(document).ready(function() {
 	
 	// Закрытие "Спасибо" по клику вне окна
     $(document).mouseup(function (e) {
-        var popup = $('.js-popup-thank')
+        const popup = $('.js-popup-thank')
         if (e.target!=popup[0]&&popup.has(e.target).length === 0) { 
 			$('.js-overlay-thank').fadeOut()
         }
