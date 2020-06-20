@@ -5,16 +5,11 @@ $(document).ready(function() {
     const menu = $('#navMenu')
     const navBar = $('.nav-bar')
     
-    // Событие при нажатии на кнопку
     $(pull).on('click', function(e){
-        // Отменяем стандартное поведение
         e.preventDefault()
-        // Открываем, скрываем меню
         menu.slideToggle()
-        // Добовляем класс "active"
         $(navBar).toggleClass('active')
     })
-    
     // При изменении ширины окна 
     $(window).resize(function(){
         const w = $(window).width()
@@ -22,15 +17,6 @@ $(document).ready(function() {
             menu.removeAttr('style')
         }
     })
-
-    // Сворачиваем меню при клике на ссылку
-    // const widthNav = $(window).width()
-    // if(widthNav < 1200) {
-    //     $('#navMenu').on('click', function(){
-    //         menu.slideToggle()
-    //         $(navBar).toggleClass('active')
-    //     })
-	// }
 
 
 	// Слайдер
@@ -40,6 +26,7 @@ $(document).ready(function() {
 		slideshow: false,
 		controlNav: false,
 		directionNav: false,
+		touch: false,
 
 		start: function(slider){
 			$('.owl-next').click(function(event){
@@ -52,7 +39,6 @@ $(document).ready(function() {
 			})
 		}
 	})
-	
 	$(".owl-carousel").owlCarousel({
 		items: 1,
 		nav: true,
@@ -62,45 +48,27 @@ $(document).ready(function() {
 		],
 		dots: false,
 		loop: true,
-		stagePadding: 80,
-		smartSpeed: 150
+		smartSpeed: 150,
+		stagePadding: 0,
+		responsive: {
+			1200:{
+				stagePadding: 80
+			}
+		}
 	})
 
-
-	// Модальное окно popup-electro-voice
-	// Открыть по кнопке
-    $('.js-button').click(function(){
-        $('.js-overlay').fadeIn()
-    })
-
-    // Закрытие окна
-    $('.js-close').click(function(){
-        $('.js-overlay').fadeOut()
-    })
-
-    // Закрытие по клику вне окна
-    $(document).mouseup(function (e) {
-        const popup = $('.js-popup')
-        if (e.target!=popup[0]&&popup.has(e.target).length === 0) { 
-            $('.js-overlay').fadeOut()
-        }
-	})
-	
 
 	// Модальное окно popup-form
-	// Открыть по кнопке
     $('.js-button-form').click(function(){
 		$('.js-overlay-form').fadeIn()
 		// $('body').addClass('noscroll')
-    })
-
-    // Закрытие окна
+	})
+	
     $('.js-close-form').click(function(){
 		$('.js-overlay-form').fadeOut()
 		// $('body').removeClass('noscroll')
-    })
-
-    // Закрытие по клику вне окна
+	})
+	
     $(document).mouseup(function (e) {
         const popup = $('.js-popup-form')
         if (e.target!=popup[0]&&popup.has(e.target).length === 0) { 
@@ -126,6 +94,7 @@ $(document).ready(function() {
 	// 			dataType: 'html',
 	// 			data: $(this).serialize()
 	// 		}).done(function() {
+	//          $('.js-overlay-form').fadeOut()
 	// 			$('.js-overlay-thank').fadeIn()
 	// 			$(this).find('input').val('')
 	// 			$('#backcall-form').trigger('reset')
@@ -140,16 +109,15 @@ $(document).ready(function() {
 	// Закомментировать код ниже если тестировать на сервере!!!
 	// При нажатие 'отправить'
 	$('.js-form-btn').click(function(){
+		$('.js-overlay-form').fadeOut()
 		$('.js-overlay-thank').fadeIn()
 	})
 	// Закомментировать!!!
 
-	// Закрытие окна "Спасибо"
     $('.js-close-thank').click(function(){
 		$('.js-overlay-thank').fadeOut()
 	})
-	
-	// Закрытие "Спасибо" по клику вне окна
+
     $(document).mouseup(function (e) {
         const popup = $('.js-popup-thank')
         if (e.target!=popup[0]&&popup.has(e.target).length === 0) { 
@@ -157,5 +125,21 @@ $(document).ready(function() {
         }
 	})
 
+
+	// Модальное окно popup-electro-voice
+    $('.js-button').click(function(){
+        $('.js-overlay').fadeIn()
+	})
+	
+    $('.js-close').click(function(){
+        $('.js-overlay').fadeOut()
+	})
+	
+    $(document).mouseup(function (e) {
+        const popup = $('.js-popup')
+        if (e.target!=popup[0]&&popup.has(e.target).length === 0) { 
+            $('.js-overlay').fadeOut()
+        }
+	})
 
 })

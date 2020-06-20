@@ -1,18 +1,26 @@
 .button {
-    width: 186px;
-    height: 48px;
+    width: 158px;
+    height: 42px;
     font-family: 'Montserrat', sans-serif;
     color: #fff;
     font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 14px;
+    line-height: 17px;
     text-align: center;
     border-radius: 8px;
     outline: none;
+
+    @media (min-width: 1200px) {
+        width: 186px;
+        height: 48px;
+        font-size: 16px;
+        line-height: 20px;
+	}
 }
 
 .btn-1 {
-    margin-right: 25px;
+    margin-right: 16px;
+    margin-bottom: 10px;
     background-color: transparent;
     border: 1px solid #fff;
     transition: .2s;
@@ -21,6 +29,11 @@
         opacity: 0.8;
         transition: .2s;
     }
+
+    @media (min-width: 1200px) {
+        margin-right: 25px;
+        margin-bottom: 0;
+	}
 }
 
 .btn-2 {
@@ -43,8 +56,8 @@
     background: #397DFF;
     border-radius: 8px;
     font-weight: 600;
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 16px;
+    line-height: 20px;
     color: #FFFFFF;
     font-family: 'Montserrat', sans-serif;
     border: none;
@@ -56,12 +69,17 @@
         box-shadow: 0 6px 20px 0 rgba(0, 81, 170, 0.68);
         transition: .3s;
     }
+
+    @media (min-width: 1200px) {
+        font-size: 18px;
+        line-height: 22px;
+	}
 }
 
 .header-nav__btn {
     margin-bottom: 32px;
-    padding-left: 80px;
-    padding-right: 80px;
+    padding-left: 70px;
+    padding-right: 70px;
     max-width: 340px;
     height: 42px;
     font-family: 'Montserrat', sans-serif;

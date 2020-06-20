@@ -11,20 +11,29 @@
 }
 
 .popup-thank {
-    width: 540px;
-    padding: 32px 42px 39px 42px;
+    width: 320px;
+    padding: 42px 15px 35px 15px;
     background: #FFFFFF;
     border-radius: 10px;
     position: absolute;
-    left: 50%;
     top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
+
+    @media (min-width: 768px) {
+        width: 350px;
+	}
+
+    @media (min-width: 1200px) {
+        width: 540px;
+        padding: 32px 42px 39px 42px;
+	}
 }
 
 .popup-thank__check-wrapper {
     margin-bottom: 20px;
-    width: 160px;
-    height: 160px;
+    width: 130px;
+    height: 130px;
     background: #F2F4F7;
     border: 1px solid #397DFF;
     border-radius: 100%;
@@ -33,11 +42,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media (min-width: 1200px) {
+        width: 160px;
+        height: 160px;
+	}
 }
 
 .popup-thank__check {
-    width: 77px;
-    height: 77px;
+    width: 62px;
+    height: 62px;
     background: #397DFF;
     border-radius: 100%;
     display: flex;
@@ -46,23 +60,37 @@
 
     &:before {
         content: "";
-        width: 42px;
-        height: 32px;
+        width: 26px;
+        height: 18px;
         background-image: url(../img/check_send.png);
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
 
     }
+
+    @media (min-width: 1200px) {
+        width: 77px;
+        height: 77px;
+        &:before {
+            width: 42px;
+            height: 32px;
+        }
+	}
 }
 
 .popup-thank-text {
-    margin-bottom: 27px;
+    margin-bottom: 24px;
     color: #2B2D3A;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 14px;
     line-height: 162%;
     text-align: center;
+
+    @media (min-width: 1200px) {
+        margin-bottom: 27px;
+        font-size: 18px;
+	}
 }
 
 .popup-thank-close {

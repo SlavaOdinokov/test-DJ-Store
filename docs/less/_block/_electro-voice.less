@@ -1,36 +1,55 @@
 .electro-voice {
-    padding-top: 166px;
-    display: flex;
+    padding-top: 40px;
     max-width: 1920px;
     margin-left: auto;
     margin-right: auto;
+
+    @media (min-width: 768px) {
+        display: flex;
+		padding-top: 83px;
+	}
+
+	@media (min-width: 1200px) {
+		padding-top: 166px;
+	}
 }
 
 .electro-voice__img-left {
-    width: 50%;
+    width: 100%;
     max-width: 960px;
+
+    @media (min-width: 768px) {
+		width: 50%;
+	}
 }
 
 .electro-voice__img-right {
-    width: 50%;
+    width: 100%;
     max-width: 960px;
     position: relative;
+
+    @media (min-width: 768px) {
+		width: 50%;
+	}
 }
 
 .electro-voice__speaker {
     position: absolute;
-    z-index: 2;
     top: 17%;
-    width: 73px;
-    height: 73px;
+    width: 40px;
+    height: 40px;
     background: rgba(57, 125, 255, 0.15);
-    // mix-blend-mode: screen;
     border: 1px solid #397DFF;
     border-radius: 100%;
 
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media (min-width: 1200px) {
+		width: 73px;
+        height: 73px;
+	}
 }
 
 .electro-voice__speaker-1 {
@@ -44,22 +63,16 @@
 }
 
 .electro-voice__speaker-inner {
-    width: 26px;
-    height: 26px;
-    // mix-blend-mode: screen;
+    width: 20px;
+    height: 20px;
     border: 1px solid #397DFF;
     border-radius: 100%;
     cursor: pointer;
-    // transition: .3s;
-
-    // &:hover {
-    //     background: #397DFF;
-    //     transition: .3s;
-    //     span {
-    //         opacity: 1;
-    //         transition: .3s;
-    //     }
-    // }
+    
+    @media (min-width: 1200px) {
+		width: 26px;
+        height: 26px;
+	}
 }
 .electro-voice__speaker-inner-on {
     background: #397DFF;
@@ -72,20 +85,36 @@
     &:after {
         content: "";
         position: absolute;
-        top: 7px;
-        left: 11px;
+        top: 5px;
+        left: 8px;
         width: 2px;
-        height: 10px;
+        height: 8px;
         background-color: #fff;
     }
 
     &:before {
         content: "";
         position: absolute;
-        top: 11px;
-        left: 7px;
-        width: 10px;
+        top: 8px;
+        left: 5px;
+        width: 8px;
         height: 2px;
         background-color: #fff;
     }
+
+    @media (min-width: 1200px) {
+		&:after {
+            top: 7px;
+            left: 11px;
+            width: 2px;
+            height: 10px;
+        }
+    
+        &:before {
+            top: 11px;
+            left: 7px;
+            width: 10px;
+            height: 2px;
+        }
+	}
 }

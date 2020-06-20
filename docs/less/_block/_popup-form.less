@@ -11,30 +11,48 @@
 }
 
 .popup-form {
-    width: 540px;
-    padding: 32px 32px 48px 32px;
+    width: 320px;
+    padding: 32px 10px 32px 10px;
     background: #FFFFFF;
     border-radius: 10px;
     position: absolute;
-    left: 50%;
     top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
+
+    @media (min-width: 768px) {
+        width: 350px;
+	}
+
+    @media (min-width: 1200px) {
+        width: 540px;
+        padding: 32px 32px 48px 32px;
+	}
 }
 
 .popup-form-heading {
     margin-bottom: 7px;
     color: #2B2D3A;
     font-weight: 600;
-    font-size: 24px;
-    line-height: 29px;
+    font-size: 21px;
+    line-height: 26px;
+
+    @media (min-width: 1200px) {
+        font-size: 24px;
+        line-height: 29px;
+	}
 }
 
 .popup-form-text {
     margin-bottom: 20px;
     color: #2B2D3A;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 12px;
     line-height: 160%;
+
+    @media (min-width: 1200px) {
+        font-size: 16px;
+	}
 }
 
 .popup-form-close {
@@ -78,7 +96,7 @@
     border-radius: 9px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 114%;
     color: rgba(43, 45, 58, 0.5);
     transition: .4s;
@@ -93,15 +111,20 @@
     &:last-child {
         margin-bottom: 32px;
     }
+
+    @media (min-width: 1200px) {
+        font-size: 16px;
+	}
 }
 
 .form-personal-data {
     margin-bottom: 14px;
     display: flex;
+    align-items: center;
     color: #2B2D3A;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 8px;
+    line-height: 11px;
 
     a {
         color: #397DFF;
@@ -109,6 +132,15 @@
             opacity: 0.8;
         }
     }
+
+    @media (min-width: 768px) {
+        font-size: 9px;
+	}
+
+    @media (min-width: 1200px) {
+        font-size: 14px;
+        line-height: 17px;
+	}
 }
 
 .custom-checkbox {
@@ -129,11 +161,8 @@
         left: 1px;
         bottom: 0;
         right: 0;
-        
-        // display: block;
         width: 13px;
         height: 9px;
-
         background-image: url(../img/check.svg);
         background-size: contain;
         background-position: center;
