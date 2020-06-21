@@ -61,19 +61,19 @@ $(document).ready(function() {
 	// Модальное окно popup-form
     $('.js-button-form').click(function(){
 		$('.js-overlay-form').fadeIn()
-		// $('body').addClass('noscroll')
+		$('body').addClass('noscroll')
 	})
 	
     $('.js-close-form').click(function(){
 		$('.js-overlay-form').fadeOut()
-		// $('body').removeClass('noscroll')
+		$('body').removeClass('noscroll')
 	})
 	
     $(document).mouseup(function (e) {
         const popup = $('.js-popup-form')
         if (e.target!=popup[0]&&popup.has(e.target).length === 0) { 
 			$('.js-overlay-form').fadeOut()
-			// $('body').removeClass('noscroll')
+			$('body').removeClass('noscroll')
         }
 	})
 
@@ -81,26 +81,24 @@ $(document).ready(function() {
 	// Отправка заявки 
 	// Раскомментировать код ниже если тестировать на сервере!!!
 	// В файле mail/mail.php поменять эл.почту в переменной $recepient
-	// $(document).ready(function() {
-	// 	$('#backcall-form').submit(function() { 
-	// 		if (document.form.name.value == '' || document.form.phone.value == '') {
-	// 			valid = false;
-	// 			alert('Заполните все обязательные поля!')
-	// 			return valid;
-	// 		}
-	// 		$.ajax({
-	// 			type: "POST",
-	// 			url: "mail/mail.php",
-	// 			dataType: 'html',
-	// 			data: $(this).serialize()
-	// 		}).done(function() {
-	//          $('.js-overlay-form').fadeOut()
-	// 			$('.js-overlay-thank').fadeIn()
-	// 			$(this).find('input').val('')
-	// 			$('#backcall-form').trigger('reset')
-	// 		})
-	// 		return false;
+	// $('#backcall-form').submit(function() { 
+	// 	if (document.form.name.value == '' || document.form.phone.value == '') {
+	// 		valid = false;
+	// 		alert('Заполните все обязательные поля!')
+	// 		return valid;
+	// 	}
+	// 	$.ajax({
+	// 		type: "POST",
+	// 		url: "mail/mail.php",
+	// 		dataType: 'html',
+	// 		data: $(this).serialize()
+	// 	}).done(function() {
+	// 		$('.js-overlay-form').fadeOut()
+	// 		$('.js-overlay-thank').fadeIn()
+	// 		$(this).find('input').val('')
+	// 		$('#backcall-form').trigger('reset')
 	// 	})
+	// 	return false;
 	// })
 	// Раскомментировать!!!
 
