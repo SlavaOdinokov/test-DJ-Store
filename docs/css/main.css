@@ -700,6 +700,10 @@ header {
   max-width: 960px;
   position: relative;
 }
+.electro-voice__img-right img {
+  position: relative;
+  z-index: -2;
+}
 @media (min-width: 768px) {
   .electro-voice__img-right {
     width: 50%;
@@ -735,6 +739,7 @@ header {
           transform: translate(-50%, -50%);
 }
 .electro-voice__speaker-2 {
+  z-index: -1;
   right: 23.5%;
   -webkit-transform: translate(50%, -50%);
           transform: translate(50%, -50%);
@@ -809,7 +814,10 @@ header {
   left: -41px;
   top: -186px;
   position: relative;
-  z-index: 10;
+  z-index: 19;
+}
+.popup img {
+  z-index: 1;
 }
 @media (min-width: 768px) {
   .popup {

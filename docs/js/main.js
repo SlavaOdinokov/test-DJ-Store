@@ -61,6 +61,7 @@ $(document).ready(function() {
 	// Модальное окно popup-form
     $('.js-button-form').click(function(){
 		$('.js-overlay-form').fadeIn()
+		// $('.js-popup-form').focus()
 		$('body').addClass('noscroll')
 	})
 	

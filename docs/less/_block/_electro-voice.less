@@ -28,6 +28,11 @@
     max-width: 960px;
     position: relative;
 
+    img {
+        position: relative;
+        z-index: -2;
+    }
+
     @media (min-width: 768px) {
 		width: 50%;
 	}
@@ -58,6 +63,7 @@
 }
 
 .electro-voice__speaker-2 {
+    z-index: -1;
     right: 23.5%;
     transform: translate(50%,-50%);
 }
