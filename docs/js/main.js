@@ -61,20 +61,16 @@ $(document).ready(function() {
 	// Модальное окно popup-form
     $('.js-button-form').click(function(){
 		$('.js-overlay-form').fadeIn()
-		// $('.js-popup-form').focus()
-		$('body').addClass('noscroll')
 	})
 	
     $('.js-close-form').click(function(){
 		$('.js-overlay-form').fadeOut()
-		$('body').removeClass('noscroll')
 	})
 	
     $(document).mouseup(function (e) {
         const popup = $('.js-popup-form')
         if (e.target!=popup[0]&&popup.has(e.target).length === 0) { 
 			$('.js-overlay-form').fadeOut()
-			$('body').removeClass('noscroll')
         }
 	})
 
@@ -84,22 +80,29 @@ $(document).ready(function() {
 	// В файле mail/mail.php поменять эл.почту в переменной $recepient
 	// $('#backcall-form').submit(function() { 
 	// 	if (document.form.name.value == '' || document.form.phone.value == '') {
-	// 		valid = false;
+	// 		valid = false
 	// 		alert('Заполните все обязательные поля!')
-	// 		return valid;
+	// 		return valid
 	// 	}
-	// 	$.ajax({
-	// 		type: "POST",
-	// 		url: "mail/mail.php",
-	// 		dataType: 'html',
-	// 		data: $(this).serialize()
-	// 	}).done(function() {
-	// 		$('.js-overlay-form').fadeOut()
-	// 		$('.js-overlay-thank').fadeIn()
-	// 		$(this).find('input').val('')
-	// 		$('#backcall-form').trigger('reset')
-	// 	})
-	// 	return false;
+	// 	else if ($("#check").prop('checked')) {
+	// 		$.ajax({
+	// 			type: "POST",
+	// 			url: "mail/mail.php",
+	// 			dataType: 'html',
+	// 			data: $(this).serialize()
+	// 		}).done(function() {
+	// 			$('.js-overlay-form').fadeOut()
+	// 			$('.js-overlay-thank').fadeIn()
+	// 			$(this).find('input').val('')
+	// 			$('#backcall-form').trigger('reset')
+	// 		})
+	// 		return false
+	// 	} 
+	// 	else {
+	// 		valid = false
+	// 		alert('Примите согласие обработки персональных данных!')
+	// 		return valid
+	// 	}
 	// })
 	// Раскомментировать!!!
 
