@@ -489,29 +489,29 @@ header {
   }
 }
 .slider-item-1 {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(1, 1, 1, 0.6)), to(rgba(1, 1, 1, 0.6))), url(../img/slider-bg/slider-bg-1.jpg);
-  background: linear-gradient(0deg, rgba(1, 1, 1, 0.6), rgba(1, 1, 1, 0.6)), url(../img/slider-bg/slider-bg-1.jpg);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(1, 1, 1, 0.6)), to(rgba(1, 1, 1, 0.6))), url(../img/slider-bg/slider-bg-1.webp);
+  background: linear-gradient(0deg, rgba(1, 1, 1, 0.6), rgba(1, 1, 1, 0.6)), url(../img/slider-bg/slider-bg-1.webp);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .slider-item-2 {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(1, 1, 1, 0.6)), to(rgba(1, 1, 1, 0.6))), url(../img/slider-bg/slider-bg-2.jpg);
-  background: linear-gradient(0deg, rgba(1, 1, 1, 0.6), rgba(1, 1, 1, 0.6)), url(../img/slider-bg/slider-bg-2.jpg);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(1, 1, 1, 0.6)), to(rgba(1, 1, 1, 0.6))), url(../img/slider-bg/slider-bg-2.webp);
+  background: linear-gradient(0deg, rgba(1, 1, 1, 0.6), rgba(1, 1, 1, 0.6)), url(../img/slider-bg/slider-bg-2.webp);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .slider-item-3 {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(1, 1, 1, 0.6)), to(rgba(1, 1, 1, 0.6))), url(../img/slider-bg/slider-bg-3.jpg);
-  background: linear-gradient(0deg, rgba(1, 1, 1, 0.6), rgba(1, 1, 1, 0.6)), url(../img/slider-bg/slider-bg-3.jpg);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(1, 1, 1, 0.6)), to(rgba(1, 1, 1, 0.6))), url(../img/slider-bg/slider-bg-3.webp);
+  background: linear-gradient(0deg, rgba(1, 1, 1, 0.6), rgba(1, 1, 1, 0.6)), url(../img/slider-bg/slider-bg-3.webp);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .slider-item-4 {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(1, 1, 1, 0.6)), to(rgba(1, 1, 1, 0.6))), url(../img/slider-bg/slider-bg-4.jpg);
-  background: linear-gradient(0deg, rgba(1, 1, 1, 0.6), rgba(1, 1, 1, 0.6)), url(../img/slider-bg/slider-bg-4.jpg);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(1, 1, 1, 0.6)), to(rgba(1, 1, 1, 0.6))), url(../img/slider-bg/slider-bg-4.webp);
+  background: linear-gradient(0deg, rgba(1, 1, 1, 0.6), rgba(1, 1, 1, 0.6)), url(../img/slider-bg/slider-bg-4.webp);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
