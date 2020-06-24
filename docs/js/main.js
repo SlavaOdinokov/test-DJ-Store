@@ -4,18 +4,6 @@ $(document).ready(function() {
     const pull = $('#navToggle')
     const menu = $('#navMenu')
 	const navBar = $('.nav-bar span')
-	
-	// Выезжает сверху
-    // $(pull).on('click', function(e){
-    //     e.preventDefault()
-    //     menu.slideToggle()
-    //     $(navBar).toggleClass('active')
-    // })
-    // // При изменении ширины окна 
-    // $(window).resize(function(){
-	// 	$(menu).removeClass('active')
-	// 	$(pull).removeClass('active')
-	// })
    
 	// Выезжает справа
 	$(pull).on('click', function(){
@@ -23,12 +11,10 @@ $(document).ready(function() {
         $(this).toggleClass('active')
         $(navBar).toggleClass('active')
 	})
-	
 	$(window).resize(function(){
 		$(menu).removeClass('active')
 		$(pull).removeClass('active')
 	})
-
 
 	// Слайдер
 	$('.flexslider').flexslider({
@@ -38,7 +24,6 @@ $(document).ready(function() {
 		controlNav: false,
 		directionNav: false,
 		keyboard: false,
-
 		start: function(slider){
 			$('.owl-next').click(function(event){
 				event.preventDefault()
@@ -78,11 +63,9 @@ $(document).ready(function() {
     $('.js-button-form').click(function(){
 		$('.js-overlay-form').fadeIn()
 	})
-	
     $('.js-close-form').click(function(){
 		$('.js-overlay-form').fadeOut()
 	})
-	
     $(document).mouseup(function (e) {
         const popup = $('.js-popup-form')
         if (e.target!=popup[0]&&popup.has(e.target).length === 0) { 
@@ -90,52 +73,15 @@ $(document).ready(function() {
         }
 	})
 
-
-	// Отправка заявки 
-	// Раскомментировать код ниже если тестировать на сервере!!!
-	// В файле mail/mail.php поменять эл.почту в переменной $recepient
-	// $('#backcall-form').submit(function() { 
-	// 	if (document.form.name.value == '' || document.form.phone.value == '') {
-	// 		valid = false
-	// 		alert('Заполните все обязательные поля!')
-	// 		return valid
-	// 	}
-	// 	else if ($("#check").prop('checked')) {
-	// 		$.ajax({
-	// 			type: "POST",
-	// 			url: "mail/mail.php",
-	// 			dataType: 'html',
-	// 			data: $(this).serialize()
-	// 		}).done(function() {
-	// 			$('.js-overlay-form').fadeOut()
-	// 			$('.js-overlay-thank').fadeIn()
-	// 			$(this).find('input').val('')
-	// 			$('#backcall-form').trigger('reset')
-	// 		})
-	// 		return false
-	// 	} 
-	// 	else {
-	// 		valid = false
-	// 		alert('Примите согласие обработки персональных данных!')
-	// 		return valid
-	// 	}
-	// })
-	// Раскомментировать!!!
-
-
 	// Модальное окно thank
-	// Закомментировать код ниже если тестировать на сервере!!!
 	// При нажатие 'отправить'
 	$('.js-form-btn').click(function(){
 		$('.js-overlay-form').fadeOut()
 		$('.js-overlay-thank').fadeIn()
 	})
-	// Закомментировать!!!
-
     $('.js-close-thank').click(function(){
 		$('.js-overlay-thank').fadeOut()
 	})
-
     $(document).mouseup(function (e) {
         const popup = $('.js-popup-thank')
         if (e.target!=popup[0]&&popup.has(e.target).length === 0) { 
@@ -143,21 +89,17 @@ $(document).ready(function() {
         }
 	})
 
-
 	// Модальное окно popup-electro-voice
     $('.js-button').click(function(){
         $('.js-overlay').fadeIn()
 	})
-	
     $('.js-close').click(function(){
         $('.js-overlay').fadeOut()
 	})
-	
     $(document).mouseup(function (e) {
         const popup = $('.js-popup')
         if (e.target!=popup[0]&&popup.has(e.target).length === 0) { 
             $('.js-overlay').fadeOut()
         }
 	})
-
 })
