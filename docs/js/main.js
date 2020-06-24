@@ -3,20 +3,31 @@ $(document).ready(function() {
 	// Выпадающее меню
     const pull = $('#navToggle')
     const menu = $('#navMenu')
-    const navBar = $('.nav-bar')
-    
-    $(pull).on('click', function(e){
-        e.preventDefault()
-        menu.slideToggle()
+	const navBar = $('.nav-bar span')
+	
+	// Выезжает сверху
+    // $(pull).on('click', function(e){
+    //     e.preventDefault()
+    //     menu.slideToggle()
+    //     $(navBar).toggleClass('active')
+    // })
+    // // При изменении ширины окна 
+    // $(window).resize(function(){
+	// 	$(menu).removeClass('active')
+	// 	$(pull).removeClass('active')
+	// })
+   
+	// Выезжает справа
+	$(pull).on('click', function(){
+        $(menu).toggleClass('active')
+        $(this).toggleClass('active')
         $(navBar).toggleClass('active')
-    })
-    // При изменении ширины окна 
-    $(window).resize(function(){
-        const w = $(window).width()
-        if(w > 640 && menu.is(':hidden')) {
-            menu.removeAttr('style')
-        }
-    })
+	})
+	
+	$(window).resize(function(){
+		$(menu).removeClass('active')
+		$(pull).removeClass('active')
+	})
 
 
 	// Слайдер
@@ -26,7 +37,7 @@ $(document).ready(function() {
 		slideshow: false,
 		controlNav: false,
 		directionNav: false,
-		touch: false,
+		keyboard: false,
 
 		start: function(slider){
 			$('.owl-next').click(function(event){
@@ -57,6 +68,11 @@ $(document).ready(function() {
 		}
 	})
 
+	// Маска для поля формы 'Телефон*'
+	$('#phone').inputmask({
+		'mask': '+7(999) 999-9999', 
+		showMaskOnHover: false
+	})
 
 	// Модальное окно popup-form
     $('.js-button-form').click(function(){

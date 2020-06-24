@@ -18,7 +18,7 @@
 				<nav class="header-nav">
 					<div class="header__logo">
 						<a href="index.html">
-							<img src="./img/logo.png" alt="Logo">
+							<img src="./img/logo.svg" alt="Logo">
 						</a>
 						<div id="navToggle" class="nav-bar"><span></span></div>
 					</div>
@@ -236,20 +236,20 @@
 									<img src="./img/icons/popup-icon.svg" alt="speaker">
 								</div>
 							</div>
-							<ul class="popup-list">
-								<li class="popup-list__item">
+							<ul>
+								<li>
 									<span></span>
 									Очень мягкое звучание.
 								</li>
-								<li class="popup-list__item">
+								<li>
 									<span></span>
 									Чувствительность — 89 дБ.
 								</li>
-								<li class="popup-list__item">
+								<li>
 									<span></span>
 									Пиковая мощность — 400 Вт.
 								</li>
-								<li class="popup-list__item">
+								<li>
 									<span></span>
 									Степень влагозащищенности IP34.
 								</li>
@@ -278,11 +278,11 @@
 			
 			<form id="backcall-form" name="form" onsubmit="return false;">
 				<input class="form-field" placeholder="Имя*" type="text" name="name">
-				<input class="form-field" placeholder="Телефон*" type="text" name="phone">
+				<input id="phone" class="form-field" placeholder="Телефон*" type="tel" name="phone">
 				<label class="form-personal-data">
 					<input id="check" class="real-checkbox" type="checkbox" value="personal_data" name="date">
 					<div class="custom-checkbox"></div>
-					Я согласен с условиями обработки &nbsp;<a href="#!">персональных данных</a>
+					Я согласен с условиями обработки &nbsp;<a href="#!" target="_blank">персональных данных</a>
 				</label>
 				<!-- type="submit" value="Отправить" -->
 				<button class="form-btn js-form-btn">Отправить</button>
@@ -309,6 +309,7 @@
 	<script src="./libs/jquery/jquery-3.4.1.min.js"></script>
 	<script src="./libs/owlcarousel2/owl.carousel.min.js"></script>
 	<script src="./libs/flexslider/jquery.flexslider.js"></script>
+	<script src="./libs/Inputmask-5.x/jquery.inputmask.min.js"></script>
 	<script src="js/main.js"></script>
 
 </body>
