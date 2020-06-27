@@ -76,8 +76,11 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 20;
+  z-index: 10;
   background-color: #EBEEF5;
+}
+header.active {
+  position: static;
 }
 .header {
   display: -webkit-box;
@@ -207,10 +210,9 @@ header {
 #navMenu {
   position: fixed;
   z-index: 21;
-  top: 91px;
+  top: 89px;
   bottom: 0;
   right: 0;
-  padding-left: 30px;
   width: 100%;
   background-color: #EBEEF5;
   -webkit-transform: translateX(100%);
@@ -233,6 +235,7 @@ header {
   }
 }
 #navMenu.active {
+  position: static;
   -webkit-transform: translateX(0%);
           transform: translateX(0%);
 }
@@ -489,29 +492,29 @@ header {
   }
 }
 .slider-item-1 {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(1, 1, 1, 0.6)), to(rgba(1, 1, 1, 0.6))), url(../img/slider-bg/slider-bg-1.webp);
-  background: linear-gradient(0deg, rgba(1, 1, 1, 0.6), rgba(1, 1, 1, 0.6)), url(../img/slider-bg/slider-bg-1.webp);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(1, 1, 1, 0.6)), to(rgba(1, 1, 1, 0.6))), url(../img/slider-bg/slider-bg-1.jpg);
+  background: linear-gradient(0deg, rgba(1, 1, 1, 0.6), rgba(1, 1, 1, 0.6)), url(../img/slider-bg/slider-bg-1.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .slider-item-2 {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(1, 1, 1, 0.6)), to(rgba(1, 1, 1, 0.6))), url(../img/slider-bg/slider-bg-2.webp);
-  background: linear-gradient(0deg, rgba(1, 1, 1, 0.6), rgba(1, 1, 1, 0.6)), url(../img/slider-bg/slider-bg-2.webp);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(1, 1, 1, 0.6)), to(rgba(1, 1, 1, 0.6))), url(../img/slider-bg/slider-bg-2.jpg);
+  background: linear-gradient(0deg, rgba(1, 1, 1, 0.6), rgba(1, 1, 1, 0.6)), url(../img/slider-bg/slider-bg-2.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .slider-item-3 {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(1, 1, 1, 0.6)), to(rgba(1, 1, 1, 0.6))), url(../img/slider-bg/slider-bg-3.webp);
-  background: linear-gradient(0deg, rgba(1, 1, 1, 0.6), rgba(1, 1, 1, 0.6)), url(../img/slider-bg/slider-bg-3.webp);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(1, 1, 1, 0.6)), to(rgba(1, 1, 1, 0.6))), url(../img/slider-bg/slider-bg-3.jpg);
+  background: linear-gradient(0deg, rgba(1, 1, 1, 0.6), rgba(1, 1, 1, 0.6)), url(../img/slider-bg/slider-bg-3.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .slider-item-4 {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(1, 1, 1, 0.6)), to(rgba(1, 1, 1, 0.6))), url(../img/slider-bg/slider-bg-4.webp);
-  background: linear-gradient(0deg, rgba(1, 1, 1, 0.6), rgba(1, 1, 1, 0.6)), url(../img/slider-bg/slider-bg-4.webp);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(1, 1, 1, 0.6)), to(rgba(1, 1, 1, 0.6))), url(../img/slider-bg/slider-bg-4.jpg);
+  background: linear-gradient(0deg, rgba(1, 1, 1, 0.6), rgba(1, 1, 1, 0.6)), url(../img/slider-bg/slider-bg-4.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -839,7 +842,7 @@ header {
   border-radius: 10px;
   position: absolute;
   left: -41px;
-  top: -186px;
+  top: -168px;
   position: relative;
   z-index: 19;
 }
@@ -1011,7 +1014,7 @@ header {
   top: 0;
   cursor: auto;
   background-color: rgba(0, 0, 0, 0.4);
-  z-index: 10;
+  z-index: 15;
   display: none;
 }
 .popup-form {
@@ -1325,7 +1328,7 @@ header {
           transform: rotate(-45deg);
 }
 .button {
-  width: 158px;
+  width: 180px;
   height: 42px;
   font-family: 'Montserrat', sans-serif;
   color: #fff;

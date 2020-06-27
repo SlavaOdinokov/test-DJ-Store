@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
 	// Выпадающее меню
     const pull = $('#navToggle')
     const menu = $('#navMenu')
@@ -9,12 +8,13 @@ $(document).ready(function() {
 	$(pull).on('click', function(){
         $(menu).toggleClass('active')
         $(this).toggleClass('active')
-        $(navBar).toggleClass('active')
+		$(navBar).toggleClass('active')
+		$('header').toggleClass('active')
 	})
-	$(window).resize(function(){
-		$(menu).removeClass('active')
-		$(pull).removeClass('active')
-	})
+	// $(window).resize(function(){
+	// 	$(menu).removeClass('active')
+	// 	$(pull).removeClass('active')
+	// })
 
 	// Слайдер
 	$('.flexslider').flexslider({
@@ -72,13 +72,36 @@ $(document).ready(function() {
 			$('.js-overlay-form').fadeOut()
         }
 	})
+    
+    // Отправка заявки 
+	 $('#backcall-form').submit(function() { 
+	 	if (document.form.name.value == '' || document.form.phone.value == '') {
+	 		valid = false
+	 		alert('Заполните все обязательные поля!')
+	 		return valid
+	 	}
+	 	else if ($("#check").prop('checked')) {
+	 		$.ajax({
+	 			type: "POST",
+	 			url: "mail/mail.php",
+	 			dataType: 'html',
+	 			data: $(this).serialize()
+	 		}).done(function() {
+	 			$('.js-overlay-form').fadeOut()
+	 			$('.js-overlay-thank').fadeIn()
+	 			$(this).find('input').val('')
+	 			$('#backcall-form').trigger('reset')
+	 		})
+	 		return false
+	 	} 
+	 	else {
+	 		valid = false
+	 		alert('Примите согласие обработки персональных данных!')
+	 		return valid
+	 	}
+	 })
 
 	// Модальное окно thank
-	// При нажатие 'отправить'
-	$('.js-form-btn').click(function(){
-		$('.js-overlay-form').fadeOut()
-		$('.js-overlay-thank').fadeIn()
-	})
     $('.js-close-thank').click(function(){
 		$('.js-overlay-thank').fadeOut()
 	})
