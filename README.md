@@ -1,2 +1,11 @@
-# test-DJ-Store
-### Demo: https://slavaodinokov.github.io/test-DJ-Store/
+## test-DJ-Store
+Верстка (HTML, CSS, LESS, jQuery) из Figma макета.
+
+### Что внутри:
+* Оптимизация под декстоп, смартфон, планшет;
+* Мобильная навигация;
+* Двойной слайдер;
+* Форма обратной связи (Ajax, PHP). Данные уходят на почту и записываются в файл JSON
+
+### Тестировать
+Demo: https://slavaodinokov.github.io/test-DJ-Store/
